@@ -15,7 +15,6 @@ class TemplateView {
       //----- split out each msg object
       foreach($templateData as $msgDataObject){
         echo $this->twig->render('messagebody.html.twig', array( 'dataObject'=>$msgDataObject));
-        //return $this->twig->render('messagebody.html.twig', rray( 'dataObject'=>$msgDataObject));
       }
     }
 }
