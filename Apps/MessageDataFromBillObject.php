@@ -16,7 +16,6 @@ class MessageDataFromBillObject{
           $emailMsgArray[$userName] = $emailData;
           array_push($emailMsgArray[$userName] -> dataArray, $emailData -> serviceInfo);
           array_push($emailMsgArray[$userName] -> attachmentArray, $emailData -> fileName);
-          //var_dump($emailMsgArray[$userName]->attachmentArray);
        } else {
           array_push($emailMsgArray[$userName] -> dataArray, $emailData -> serviceInfo);
           array_push($emailMsgArray[$userName] -> attachmentArray, $emailData -> fileName);
