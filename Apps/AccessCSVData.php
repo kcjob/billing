@@ -7,8 +7,8 @@ namespace Apps;
 class AccessCSVData {
   static function getCsvDataAsArray(){
     $csvData = array();
-    $db_params = parse_ini_file("config/config.ini");
-    $csvFile = $db_params['csvFile'];
+    $fileName = parse_ini_file("config/config.ini");
+    $csvFile = $fileName['csvFile'];
 
     $file = fopen($csvFile,"r");
     while(! feof($file))

@@ -10,11 +10,8 @@ class TemplateView {
       $this->twig = new \Twig_Environment($loader, array('debug' => true));
       return  $this-> twig;
     }
-    public function generateView($templateData)
+    public function generateView($msgDataObject)
     {
-      //----- split out each msg object
-      foreach($templateData as $msgDataObject){
-        echo $this->twig->render('messagebody.html.twig', array( 'dataObject'=>$msgDataObject));
-      }
+        return $this->twig->render('messagebody.html.twig', array( 'dataObject'=>$msgDataObject));
     }
 }

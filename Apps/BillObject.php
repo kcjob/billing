@@ -1,15 +1,14 @@
 <?php
 namespace Apps;
 /**
-* Create Bill Information Object
+* Create Billing Object from Billing Details
 *
 */
 class BillObject {
-
   static function createBillObject($csvDataArray){
     foreach($csvDataArray as $userDataArray){
       if($userDataArray[2]){
-        $billObject = new billingInformation($userDataArray); // create a new object
+        $billObject = new billingDetails($userDataArray);
         $billObjectsArray[] = $billObject;
       }
     }
