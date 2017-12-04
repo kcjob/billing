@@ -2,6 +2,7 @@
 namespace Apps;
 use  Apps\EmailMessageDataObject;
 use Apps\ConfigEmail;
+
 class EmailMessageGenerator
 {
   static function createEmail(array $arrayofbillObjects){
@@ -35,15 +36,10 @@ class EmailMessageGenerator
           $message -> attach($attachment);
         }
       }
-      //echo $message->toString();
-
-//var_dump(empty($msgDataObject->attachmentArray[1]));
         // Send the message
       $mailer->send($message, $failures);
-
         // output log
       file_put_contents('data/sentEmails.log', $sentEmaillogger->dump());
-//var_dump($msgDataObject->attachmentArray);
     } //foreach
   }
 }
